@@ -1,974 +1,607 @@
 
 <!DOCTYPE html>
-
-<html lang="zh-CN">
-
+<html class="no-js" lang="en">
 <head>
 
-	<meta charset="UTF-8">
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Typerite</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
 
-	<link rel="pingback" href="https://phizer.xyz/xmlrpc.php">
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
 
-	<title>Phizer&#039;s ideaboxxx</title>
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title="Phizer&#039;s ideaboxxx &raquo; Feed" href="https://phizer.xyz/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Phizer&#039;s ideaboxxx &raquo; 评论Feed" href="https://phizer.xyz/comments/feed/" />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/phizer.xyz\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel='stylesheet' id='wp-block-library-css'  href='https://phizer.xyz/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://phizer.xyz/wp-includes/css/dist/block-library/theme.min.css?ver=5.3.2' type='text/css' media='all' />
-<link rel='stylesheet' id='escapade-css'  href='https://phizer.xyz/wp-content/themes/escapade/style.css?ver=1.1.2' type='text/css' media='all' />
-<style id='escapade-inline-css' type='text/css'>
-.site-header{background-image:url(https://phizer.xyz/wp-content/uploads/2019/05/cropped-IMG_20181115_205110-3-2400x1299.jpg);}
-.site-title a,.site-title a:visited{color:#ffffff;}.site-title a:hover,.site-title a:visited:hover{color:rgba(255, 255, 255, 0.8);}
-.hero,.hero .widget h1,.hero .widget h2,.hero .widget h3,.hero .widget h4,.hero .widget h5,.hero .widget h6,.hero .widget p,.hero .widget blockquote,.hero .widget cite,.hero .widget table,.hero .widget ul,.hero .widget ol,.hero .widget li,.hero .widget dd,.hero .widget dt,.hero .widget address,.hero .widget code,.hero .widget pre,.hero .widget .widget-title,.hero .page-header h1{color:#ffffff;}
-.main-navigation ul li a,.main-navigation ul li a:visited,.main-navigation ul li a:hover,.main-navigation ul li a:focus,.main-navigation ul li a:visited:hover{color:#ffffff;}.main-navigation .sub-menu .menu-item-has-children > a::after{border-right-color:#ffffff;border-left-color:#ffffff;}.menu-toggle div{background-color:#ffffff;}header .social-menu a,header .social-menu a:visited{color:#ffffff;}.main-navigation ul li a:hover,.main-navigation ul li a:focus{color:rgba(255, 255, 255, 0.8);}header .social-menu a:hover,header .social-menu a:visited:hover{color:rgba(255, 255, 255, 0.8);}
-h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.entry-title a,.entry-title a:visited,.widget-title{color:#dd3333;}.entry-title a:hover,.entry-title a:visited:hover,.entry-title a:focus,.entry-title a:visited:focus,.entry-title a:active,.entry-title a:visited:active{color:rgba(221, 51, 51, 0.8);}
-body,input,select,textarea,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus,.navigation.pagination .paging-nav-text{color:#252525;}hr{background-color:rgba(37, 37, 37, 0.1);border-color:rgba(37, 37, 37, 0.1);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,.select2-container .select2-choice{color:rgba(37, 37, 37, 0.5);border-color:rgba(37, 37, 37, 0.1);}select,fieldset,blockquote,pre,code,abbr,acronym,.hentry table th,.hentry table td{border-color:rgba(37, 37, 37, 0.1);}.hentry table tr:hover td{background-color:rgba(37, 37, 37, 0.05);}
-blockquote,.entry-meta,.entry-footer,.comment-meta .says,.logged-in-as,.wp-block-coblocks-author__heading{color:#757575;}
-.site-footer .widget-title,.site-footer h1,.site-footer h2,.site-footer h3,.site-footer h4,.site-footer h5,.site-footer h6{color:#757575;}
-.site-footer .widget,.site-footer .widget form label{color:#757575;}
-.footer-menu ul li a,.footer-menu ul li a:visited{color:#757575;}.site-info-wrapper .social-menu a{background-color:#757575;}.footer-menu ul li a:hover,.footer-menu ul li a:visited:hover{color:rgba(117, 117, 117, 0.8);}
-.site-info-wrapper .site-info-text{color:#757575;}
-a,a:visited,.entry-title a:hover,.entry-title a:visited:hover{color:#cc494f;}.navigation.pagination .nav-links .page-numbers.current,.social-menu a:hover{background-color:#cc494f;}.main-navigation ul li:hover,.main-navigation li.current-menu-item,.main-navigation ul li.current-menu-item > a:hover,.main-navigation ul li.current-menu-item > a:visited:hover,.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a:hover{background-color:#cc494f;}a:hover,a:visited:hover,a:focus,a:visited:focus,a:active,a:visited:active{color:rgba(204, 73, 79, 0.8);}.comment-list li.bypostauthor{border-color:rgba(204, 73, 79, 0.2);}
-button,a.button,a.button:visited,input[type="button"],input[type="reset"],input[type="submit"],.wp-block-button__link,.site-info-wrapper .social-menu a:hover{background-color:#cc494f;border-color:#cc494f;}button:hover,button:active,button:focus,a.button:hover,a.button:active,a.button:focus,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus{background-color:rgba(204, 73, 79, 0.8);border-color:rgba(204, 73, 79, 0.8);}
-button,button:hover,button:active,button:focus,a.button,a.button:hover,a.button:active,a.button:focus,a.button:visited,a.button:visited:hover,a.button:visited:active,a.button:visited:focus,input[type="button"],input[type="button"]:hover,input[type="button"]:active,input[type="button"]:focus,input[type="reset"],input[type="reset"]:hover,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"],input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focus,.wp-block-button__link{color:#ffffff;}.main-navigation ul > li:hover > a,.main-navigation ul > li:hover > a:hover,.main-navigation ul > li:hover > a:visited,.main-navigation ul > li:hover > a:visited:hover,.main-navigation ul li.current-menu-item > a{color:#ffffff;}
-body{background-color:#ffffff;}.navigation.pagination .nav-links .page-numbers.current{color:#ffffff;}
-.site-header{background-color:#0a0a0a;}.site-header{-webkit-box-shadow:inset 0 0 0 9999em;-moz-box-shadow:inset 0 0 0 9999em;box-shadow:inset 0 0 0 9999em;color:rgba(10, 10, 10, 0.38);}
-.main-navigation-container,.main-navigation.open,.main-navigation ul ul,.main-navigation .sub-menu{background-color:#7f1515;}.side-masthead{background-color:#7f1515;}
-.site-footer{background-color:#eeeeee;}
-.site-info-wrapper{background-color:#ffffff;}.site-info-wrapper .social-menu a,.site-info-wrapper .social-menu a:visited,.site-info-wrapper .social-menu a:hover,.site-info-wrapper .social-menu a:visited:hover{color:#ffffff;}
-.has-primary-color{color:#03263B;}.has-primary-background-color{background-color:#03263B;}
-.has-secondary-color{color:#0b3954;}.has-secondary-background-color{background-color:#0b3954;}
-.has-tertiary-color{color:#bddae6;}.has-tertiary-background-color{background-color:#bddae6;}
-.has-quaternary-color{color:#ff6663;}.has-quaternary-background-color{background-color:#ff6663;}
-.has-quinary-color{color:#ffffff;}.has-quinary-background-color{background-color:#ffffff;}
-</style>
-<link rel='stylesheet' id='tablepress-default-css'  href='https://phizer.xyz/wp-content/plugins/tablepress/css/default.min.css?ver=1.10' type='text/css' media='all' />
-<link rel='stylesheet' id='escapade-fonts-css'  href='https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700%7CDroid+Serif%3A300%2C400%2C700&#038;subset=latin&#038;ver=1.8.7' type='text/css' media='all' />
-<style id='escapade-fonts-inline-css' type='text/css'>
-.site-title{font-family:"Oswald", sans-serif;}
-.main-navigation ul li a,.main-navigation ul li a:visited,button,a.button,a.fl-button,input[type="button"],input[type="reset"],input[type="submit"]{font-family:"Oswald", sans-serif;}
-h1,h2,h3,h4,h5,h6,label,legend,table th,dl dt,.entry-title,.widget-title{font-family:"Oswald", sans-serif;}
-body,p,ol li,ul li,dl dd,.fl-callout-text{font-family:"Droid Serif", sans-serif;}
-blockquote,.entry-meta,.entry-footer,.comment-list li .comment-meta .says,.comment-list li .comment-metadata,.comment-reply-link,#respond .logged-in-as{font-family:"Droid Serif", sans-serif;}
-</style>
-<script type='text/javascript' src='https://phizer.xyz/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
-<script type='text/javascript' src='https://phizer.xyz/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-<link rel='https://api.w.org/' href='https://phizer.xyz/wp-json/' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://phizer.xyz/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://phizer.xyz/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 5.3.2" />
-<!-- Analytics by WP-Statistics v12.6.12 - https://wp-statistics.com/ -->
-<style type='text/css'>
-.site-title a,.site-title a:visited{color:ffffff;}
-</style><link rel="icon" href="https://phizer.xyz/wp-content/uploads/2019/05/凤羽-100x100.jpg" sizes="32x32" />
-<link rel="icon" href="https://phizer.xyz/wp-content/uploads/2019/05/凤羽-300x300.jpg" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://phizer.xyz/wp-content/uploads/2019/05/凤羽-300x300.jpg" />
-<meta name="msapplication-TileImage" content="https://phizer.xyz/wp-content/uploads/2019/05/凤羽-300x300.jpg" />
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 
 </head>
 
-<body class="home blog wp-custom-logo custom-header-image layout-two-column-default">
+<body>
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="header__top">
+                <div class="header__logo">
+                    <a class="site-logo" href="index.html">
+                        <img src="images/logo.svg" alt="Homepage">
+                    </a>
+                </div>
+
+                <div class="header__search">
+    
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="header__search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="header__search-submit" value="Search">
+                    </form>
+        
+                    <a href="#0" title="Close Search" class="header__search-close">Close</a>
+        
+                </div>  <!-- end header__search -->
+
+                <!-- toggles -->
+                <a href="#0" class="header__search-trigger"></a>
+                <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+
+            </div> <!-- end header__top -->
+
+            <nav class="header__nav-wrap">
+
+                <ul class="header__nav">
+                    <li class="current"><a href="index.html" title="">Home</a></li>
+                    <li class="has-children">
+                        <a href="#0" title="">Categories</a>
+                        <ul class="sub-menu">
+                        <li><a href="category.html">Lifestyle</a></li>
+                        <li><a href="category.html">Health</a></li>
+                        <li><a href="category.html">Family</a></li>
+                        <li><a href="category.html">Management</a></li>
+                        <li><a href="category.html">Travel</a></li>
+                        <li><a href="category.html">Work</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#0" title="">Blog Posts</a>
+                        <ul class="sub-menu">
+                        <li><a href="single-video.html">Video Post</a></li>
+                        <li><a href="single-audio.html">Audio Post</a></li>
+                        <li><a href="single-gallery.html">Gallery Post</a></li>
+                        <li><a href="single-standard.html">Standard Post</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="styles.html" title="">Styles</a></li>
+                    <li><a href="page-about.html" title="">About</a></li>
+                    <li><a href="page-contact.html" title="">Contact</a></li>
+                </ul> <!-- end header__nav -->
+
+                <ul class="header__social">
+                    <li class="ss-facebook">
+                        <a href="https://facebook.com/">
+                            <span class="screen-reader-text">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="ss-twitter">
+                        <a href="#0">
+                            <span class="screen-reader-text">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="ss-dribbble">
+                        <a href="#0">
+                            <span class="screen-reader-text">Dribbble</span>
+                        </a>
+                    </li>
+                    <li class="ss-pinterest">
+                        <a href="#0">
+                            <span class="screen-reader-text">Behance</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav> <!-- end header__nav-wrap -->
+
+            
+
+        </header> <!-- end s-header -->
+
+        <div class="s-content">
+            
+            <div class="masonry-wrap">
+
+                <div class="masonry">
+    
+                    <div class="grid-sizer"></div>
+    
+                    <article class="masonry__brick entry format-standard animate-this">
+                            
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/woodcraft-600.jpg" 
+                                        srcset="images/thumbs/masonry/woodcraft-600.jpg 1x, images/thumbs/masonry/woodcraft-1200.jpg 2x" alt="">
+                            </a>
+                        </div>
+        
+                        <div class="entry__text">
+                            <div class="entry__header">
+    
+                                <h2 class="entry__title"><a href="single-standard.html">Just a Standard Format Post.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Design</a> 
+                                        <a href="category.html">Photography</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 29, 2019</a>
+                                    </span>
+                                </div>
+                                
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+        
+                    </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-quote animate-this">
+                            
+                        <div class="entry__thumb">
+                            <blockquote>
+                                <p>Good design is making something intelligible and memorable. Great design is making something memorable and meaningful.</p>
+    
+                                <cite>Dieter Rams</cite>
+                            </blockquote>
+                        </div>   
+        
+                    </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-standard animate-this">
+                            
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/tulips-600.jpg" 
+                                        srcset="images/thumbs/masonry/tulips-600.jpg 1x, images/thumbs/masonry/tulips-1200.jpg 2x" alt="">
+                            </a>
+                        </div>
+        
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="single-standard.html">10 Interesting Facts About Caffeine.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Health</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 28, 2019</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+        
+                    </article> <!-- end article -->
+                    
+    
+                    <article class="masonry__brick entry format-standard animate-this">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/dew-600.jpg" 
+                                        srcset="images/thumbs/masonry/dew-600.jpg 1x, images/thumbs/masonry/dew-1200.jpg 2x" alt="">
+                            </a>
+                        </div>
+        
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="single-standard.html">Health Benefits Of Morning Dew.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Lifestyle</a>
+                                        <a href="category.html">Health</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 28, 2019</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+        
+                    </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-standard animate-this">
+    
+                            <div class="entry__thumb">
+                                <a href="single-standard.html" class="entry__thumb-link">
+                                    <img src="images/thumbs/masonry/rucksack-600.jpg" 
+                                            srcset="images/thumbs/masonry/rucksack-600.jpg 1x, images/thumbs/masonry/rucksack-1200.jpg 2x" alt="">
+                                </a>
+                            </div>
+            
+                            <div class="entry__text">
+                                <div class="entry__header">
+                                    
+                                    <h2 class="entry__title"><a href="single-standard.html">The Art Of Visual Storytelling.</a></h2>
+                                    
+                                    <div class="entry__meta">
+                                        <span class="entry__meta-cat">
+                                            <a href="category.html">Lifestyle</a>
+                                            <a href="category.html">Work</a>
+                                        </span>
+                                        <span class="entry__meta-date">
+                                            <a href="single-standard.html">Apr 26, 2019</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="entry__excerpt">
+                                    <p>
+                                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                    </p>
+                                </div>
+                            </div>
+            
+                        </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-standard animate-this">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/jump-600.jpg" 
+                                        srcset="images/thumbs/masonry/jump-600.jpg 1x, images/thumbs/masonry/jump-1200.jpg 2x" alt="">
+                            </a>
+                        </div>
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                
+                                <h2 class="entry__title"><a href="single-standard.html">Create Meaningful Family Moments.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Family</a>
+                                        <a href="category.html">Relationship</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 26, 2019</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+    
+                    </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-audio animate-this">
+    
+                        <div class="entry__thumb">
+                            <a href="single-audio.html" class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/guitarist-600.jpg" 
+                                     srcset="images/thumbs/masonry/guitarist-600.jpg 1x, images/thumbs/masonry/guitarist-1200.jpg 2x" alt="">
+                            </a>
+                        </div>
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="single-audio.html">What Your Music Preference Says About You and Your Personality.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Lifestyle</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 24, 2019</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+    
+                    </article> <!-- end article -->
+                    <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+    
+                    <article class="masonry__brick entry format-standard animate-this">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/beetle-600.jpg" 
+                                        srcset="images/thumbs/masonry/beetle-600.jpg 1x, images/thumbs/masonry/beetle-1200.jpg 2x" alt="">
+                            </a>
+                        </div>
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="single-standard.html">Throwback To The Good Old Days.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Lifestyle</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 24, 2019</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+    
+                    </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-video animate-this">
+                            
+                        <div class="entry__thumb video-image">
+                            <a href="https://player.vimeo.com/video/117310401?color=339989&title=0&byline=0&portrait=0" data-lity class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/cookies-600.jpg" 
+                                     srcset="images/thumbs/masonry/cookies-600.jpg 1x, images/thumbs/masonry/cookies-1200.jpg 2x" alt="">
+                            </a>
+                        </div>
+        
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="single-video.html">No Sugar Oatmeal Cookies.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Lifestyle</a>
+                                        <a href="category.html">Health</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 24, 2019</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+        
+                    </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-standard animate-this">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/lamp-600.jpg" 
+                                        srcset="images/thumbs/masonry/lamp-600.jpg 1x, images/thumbs/masonry/lamp-1200.jpg 2x" alt="">
+                            </a>
+                        </div>
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="single-standard.html">Another Standard Format Post.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Design</a>
+                                        <a href="category.html">Photography</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 24, 2019</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+    
+                    </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-link animate-this">
+                        
+                        <div class="entry__thumb">
+                            <div class="link-wrap">
+                                <h2>Powerful web & Wordpress hosting. Guaranteed. Starting at $2.59/mo!</h2>
+                                <cite>
+                                    <a target="_blank" href="https://www.dreamhost.com/r.cgi?287326">https://www.dreamhost.com</a>
+                                </cite>
+                            </div>
+                        </div>
+                        
+                    </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-gallery animate-this">
+                            
+                        <div class="entry__thumb slider">
+                            <div class="slider__slides">
+                                <div class="slider__slide">
+                                    <img src="images/thumbs/masonry/gallery/slide-1-600.jpg" 
+                                         srcset="images/thumbs/masonry/gallery/slide-1-600.jpg 1x, images/thumbs/masonry/gallery/slide-1-1200.jpg 2x" alt=""> 
+                                </div>
+                                <div class="slider__slide">
+                                    <img src="images/thumbs/masonry/gallery/slide-2-600.jpg" 
+                                         srcset="images/thumbs/masonry/gallery/slide-2-600.jpg 1x, images/thumbs/masonry/gallery/slide-2-1200.jpg 2x" alt=""> 
+                                </div>
+                                <div class="slider__slide">
+                                    <img src="images/thumbs/masonry/gallery/slide-3-600.jpg" 
+                                         srcset="images/thumbs/masonry/gallery/slide-3-600.jpg 1x, images/thumbs/masonry/gallery/slide-3-1200.jpg 2x" alt="">  
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="single-gallery.html">The Best Tropical Leaves Images.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Vacation</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 23, 2019</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+        
+                    </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-standard animate-this">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/walk-600.jpg" 
+                                        srcset="images/thumbs/masonry/walk-600.jpg 1x, images/thumbs/masonry/walk-1200.jpg 2x" alt="">
+                            </a>
+                        </div>
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="single-standard.html">Using Repetition and Patterns in Photography.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Work</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 23, 2019</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+    
+                    </article> <!-- end article -->
+    
+                    <article class="masonry__brick entry format-standard animate-this">
+    
+                        <div class="entry__thumb">
+                            <a href="single-standard.html" class="entry__thumb-link">
+                                <img src="images/thumbs/masonry/real-600.jpg" 
+                                        srcset="images/thumbs/masonry/real-600.jpg 1x, images/thumbs/masonry/real-1200.jpg 2x" alt="">
+                            </a>
+                        </div>
+    
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="single-standard.html">How We Live Is What Makes Us Real.</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a href="category.html">Travel</a>
+                                        <a href="category.html">Vacation</a>
+                                    </span>
+                                    <span class="entry__meta-date">
+                                        <a href="single-standard.html">Apr 23, 2019</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p>
+                                    Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
+                                </p>
+                            </div>
+                        </div>
+    
+                    </article> <!-- end article -->
+    
+                </div> <!-- end masonry -->
+
+            </div> <!-- end masonry-wrap -->
+
+            <div class="row">
+                <div class="column large-full">
+                    <nav class="pgn">
+                        <ul>
+                            <li><a class="pgn__prev" href="#0">Prev</a></li>
+                            <li><a class="pgn__num" href="#0">1</a></li>
+                            <li><span class="pgn__num current">2</span></li>
+                            <li><a class="pgn__num" href="#0">3</a></li>
+                            <li><a class="pgn__num" href="#0">4</a></li>
+                            <li><a class="pgn__num" href="#0">5</a></li>
+                            <li><span class="pgn__num dots">…</span></li>
+                            <li><a class="pgn__num" href="#0">8</a></li>
+                            <li><a class="pgn__next" href="#0">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+        ================================================== -->
+        <footer class="s-footer">
+            <div class="row">
+                <div class="column large-full footer__content">
+                    <div class="footer__copyright">
+                        <span>© Copyright Typerite 2019 - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+</span> <span>Design by styleshout</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"></a>
+            </div>
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
-	
-	<a class="skip-link screen-reader-text" href="#content">跳至内容</a>
-
-	
-	<header id="masthead" class="site-header" role="banner" style="background:url('https://phizer.xyz/wp-content/uploads/2019/05/cropped-IMG_20181115_205110-3-2400x1299.jpg') no-repeat top center; background-size: cover;">
-
-		
-		<div class="side-masthead">
-
-			
-<div class="menu-toggle" id="menu-toggle" role="button" tabindex="0"
-	>
-	<div></div>
-	<div></div>
-	<div></div>
-</div><!-- #menu-toggle -->
-
-<div class="site-title-wrapper">
-
-	<a href="https://phizer.xyz/" class="custom-logo-link" rel="home"><img width="180" height="180" src="https://phizer.xyz/wp-content/uploads/2019/05/cropped-凤羽-e1557288498188-1.png" class="custom-logo" alt="Phizer&#039;s ideaboxxx" srcset="https://phizer.xyz/wp-content/uploads/2019/05/cropped-凤羽-e1557288498188-1.png 180w, https://phizer.xyz/wp-content/uploads/2019/05/cropped-凤羽-e1557288498188-1-150x150.png 150w" sizes="(max-width: 180px) 100vw, 180px" /></a>
-	<h1 class="site-title"><a href="https://phizer.xyz/" rel="home">Phizer&#039;s ideaboxxx</a></h1>
-	
-</div><!-- .site-title-wrapper -->
-
-			
-<div class="main-navigation-container">
-
-	
-	<nav id="site-navigation" class="main-navigation">
-
-		<div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-76"><a href="http://phizer.xyz" aria-current="page">首页</a></li>
-<li id="menu-item-137" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-137"><a href="https://phizer.xyz/research/">研究笔记</a>
-<span  class="expand" role="button" tabindex="0"></span>
-
-<ul class="sub-menu">
-	<li id="menu-item-161" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161"><a href="https://phizer.xyz/research/game/">游戏机制</a></li>
-	<li id="menu-item-162" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-162"><a href="https://phizer.xyz/research/hardware/">硬件研究</a></li>
-</ul>
-</li>
-<li id="menu-item-143" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-143"><a href="https://phizer.xyz/bms/">BMS资料库</a></li>
-<li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-79"><a href="https://phizer.xyz/about/">About</a></li>
-</ul></div>
-	</nav><!-- #site-navigation -->
-
-	
-</div>
-
-			
-<nav class="social-menu">
-
-	<div class="menu-contact-container"><ul id="menu-contact" class="menu"><li id="menu-item-81" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81"><a href="http://weibo.com/KeiZR">微博@凤羽子</a></li>
-<li id="menu-item-82" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82"><a href="https://afdian.net/@phizer">赞助本站</a></li>
-</ul></div>
-</nav><!-- .social-menu -->
-
-		</div>
-
-		
-<div class="hero">
-
-	
-	<div class="hero-inner">
-
-		
-	</div>
-
-</div>
-
-	</header><!-- #masthead -->
-
-	<div id="page" class="hfeed site">
-
-		<div id="content" class="site-content">
-
-<div id="primary" class="content-area">
-
-	<main id="main" class="site-main" role="main">
-
-	
-		
-			
-<article id="post-521" class="post-521 post type-post status-publish format-standard hentry category-uncategorized">
-
-	
-	
-		
-	
-	
-<header class="entry-header">
-
-	<div class="entry-header-row">
-
-		<div class="entry-header-column">
-
-			
-			
-				<h2 class="entry-title"><a href="https://phizer.xyz/reduce-latency-respectv/">DJMAX RESPECT V延迟降低方案（Ver 0.2）</a></h2>
-
-			
-			
-		</div><!-- .entry-header-column -->
-
-	</div><!-- .entry-header-row -->
-
-</header><!-- .entry-header -->
-
-	
-<div class="entry-meta">
-
-	
-		<span class="posted-date">2019年12月19日</span>
-
-	
-	<span class="posted-author"><a href="https://phizer.xyz/author/admin/" title="由Phizer发布" rel="author">Phizer</a></span>
-
-	
-		<span class="comments-number">
-
-			<a href="https://phizer.xyz/reduce-latency-respectv/#comments" class="comments-link" >2 Comments</a>
-		</span>
-
-	
-</div><!-- .entry-meta -->
-
-	
-		
-<div class="entry-summary">
-
-	<p>游戏刚发售上手一打延迟还蛮大的。写一篇应&hellip;</p>
-
-	<p><a class="button" href="https://phizer.xyz/reduce-latency-respectv/" aria-label="继续阅读 DJMAX RESPECT V延迟降低方案（Ver 0.2）">继续阅读 &rarr;</a></p>
-
-</div><!-- .entry-summary -->
-
-	
-	
-<footer class="entry-footer">
-
-	<div class="entry-footer-right">
-
-		
-	</div>
-
-	
-		
-		
-			<span class="cat-links">
-
-				发帖时间： <a href="https://phizer.xyz/uncategorized/" rel="category tag">默认</a>
-			</span>
-
-		
-		
-		
-	
-</footer><!-- .entry-footer -->
-
-	
-</article><!-- #post-## -->
-
-		
-			
-<article id="post-502" class="post-502 post type-post status-publish format-standard hentry category-uncategorized">
-
-	
-	
-		
-	
-	
-<header class="entry-header">
-
-	<div class="entry-header-row">
-
-		<div class="entry-header-column">
-
-			
-			
-				<h2 class="entry-title"><a href="https://phizer.xyz/guide%ef%bc%9a%e5%a6%82%e4%bd%95%e5%9c%a8pc%e4%b8%8a%e8%8e%b7%e5%be%97%e6%9b%b4%e4%bd%8e%e7%9a%84%e5%bb%b6%e8%bf%9f%e4%bd%93%e9%aa%8c/">Guide：如何在PC上获得更低的延迟体验</a></h2>
-
-			
-			
-		</div><!-- .entry-header-column -->
-
-	</div><!-- .entry-header-row -->
-
-</header><!-- .entry-header -->
-
-	
-<div class="entry-meta">
-
-	
-		<span class="posted-date">2019年12月13日</span>
-
-	
-	<span class="posted-author"><a href="https://phizer.xyz/author/admin/" title="由Phizer发布" rel="author">Phizer</a></span>
-
-	
-		<span class="comments-number">
-
-			<a href="https://phizer.xyz/guide%ef%bc%9a%e5%a6%82%e4%bd%95%e5%9c%a8pc%e4%b8%8a%e8%8e%b7%e5%be%97%e6%9b%b4%e4%bd%8e%e7%9a%84%e5%bb%b6%e8%bf%9f%e4%bd%93%e9%aa%8c/#respond" class="comments-link" >写评论</a>
-		</span>
-
-	
-</div><!-- .entry-meta -->
-
-	
-		
-<div class="entry-summary">
-
-	<p>⚠这是一篇研究笔记/阶段性总结性质的文章&hellip;</p>
-
-	<p><a class="button" href="https://phizer.xyz/guide%ef%bc%9a%e5%a6%82%e4%bd%95%e5%9c%a8pc%e4%b8%8a%e8%8e%b7%e5%be%97%e6%9b%b4%e4%bd%8e%e7%9a%84%e5%bb%b6%e8%bf%9f%e4%bd%93%e9%aa%8c/" aria-label="继续阅读 Guide：如何在PC上获得更低的延迟体验">继续阅读 &rarr;</a></p>
-
-</div><!-- .entry-summary -->
-
-	
-	
-<footer class="entry-footer">
-
-	<div class="entry-footer-right">
-
-		
-	</div>
-
-	
-		
-		
-			<span class="cat-links">
-
-				发帖时间： <a href="https://phizer.xyz/uncategorized/" rel="category tag">默认</a>
-			</span>
-
-		
-		
-		
-	
-</footer><!-- .entry-footer -->
-
-	
-</article><!-- #post-## -->
-
-		
-			
-<article id="post-498" class="post-498 post type-post status-publish format-standard hentry category-uncategorized">
-
-	
-	
-		
-	
-	
-<header class="entry-header">
-
-	<div class="entry-header-row">
-
-		<div class="entry-header-column">
-
-			
-			
-				<h2 class="entry-title"><a href="https://phizer.xyz/how-to-measure-latency/">如何测定街机的延迟？</a></h2>
-
-			
-			
-		</div><!-- .entry-header-column -->
-
-	</div><!-- .entry-header-row -->
-
-</header><!-- .entry-header -->
-
-	
-<div class="entry-meta">
-
-	
-		<span class="posted-date">2019年12月12日</span>
-
-	
-	<span class="posted-author"><a href="https://phizer.xyz/author/admin/" title="由Phizer发布" rel="author">Phizer</a></span>
-
-	
-		<span class="comments-number">
-
-			<a href="https://phizer.xyz/how-to-measure-latency/#respond" class="comments-link" >写评论</a>
-		</span>
-
-	
-</div><!-- .entry-meta -->
-
-	
-		
-<div class="entry-summary">
-
-	<p>一、前期准备工作 您需要： 一台街机 一&hellip;</p>
-
-	<p><a class="button" href="https://phizer.xyz/how-to-measure-latency/" aria-label="继续阅读 如何测定街机的延迟？">继续阅读 &rarr;</a></p>
-
-</div><!-- .entry-summary -->
-
-	
-	
-<footer class="entry-footer">
-
-	<div class="entry-footer-right">
-
-		
-	</div>
-
-	
-		
-		
-			<span class="cat-links">
-
-				发帖时间： <a href="https://phizer.xyz/uncategorized/" rel="category tag">默认</a>
-			</span>
-
-		
-		
-		
-	
-</footer><!-- .entry-footer -->
-
-	
-</article><!-- #post-## -->
-
-		
-			
-<article id="post-273" class="post-273 post type-post status-publish format-standard hentry category-bms">
-
-	
-	
-		
-	
-	
-<header class="entry-header">
-
-	<div class="entry-header-row">
-
-		<div class="entry-header-column">
-
-			
-			
-				<h2 class="entry-title"><a href="https://phizer.xyz/whoboughtbms/">商业游戏中收录的BMS曲目</a></h2>
-
-			
-			
-		</div><!-- .entry-header-column -->
-
-	</div><!-- .entry-header-row -->
-
-</header><!-- .entry-header -->
-
-	
-<div class="entry-meta">
-
-	
-		<span class="posted-date">2019年8月17日</span>
-
-	
-	<span class="posted-author"><a href="https://phizer.xyz/author/admin/" title="由Phizer发布" rel="author">Phizer</a></span>
-
-	
-		<span class="comments-number">
-
-			<a href="https://phizer.xyz/whoboughtbms/#comments" class="comments-link" >19 Comments</a>
-		</span>
-
-	
-</div><!-- .entry-meta -->
-
-	
-		
-<div class="entry-summary">
-
-	<p>目前已知商业游戏中收录的BMS曲目共25&hellip;</p>
-
-	<p><a class="button" href="https://phizer.xyz/whoboughtbms/" aria-label="继续阅读 商业游戏中收录的BMS曲目">继续阅读 &rarr;</a></p>
-
-</div><!-- .entry-summary -->
-
-	
-	
-<footer class="entry-footer">
-
-	<div class="entry-footer-right">
-
-		
-	</div>
-
-	
-		
-		
-			<span class="cat-links">
-
-				发帖时间： <a href="https://phizer.xyz/bms/" rel="category tag">BMS资料库</a>
-			</span>
-
-		
-		
-		
-	
-</footer><!-- .entry-footer -->
-
-	
-</article><!-- #post-## -->
-
-		
-			
-<article id="post-195" class="post-195 post type-post status-publish format-standard hentry category-bms">
-
-	
-	
-		
-	
-	
-<header class="entry-header">
-
-	<div class="entry-header-row">
-
-		<div class="entry-header-column">
-
-			
-			
-				<h2 class="entry-title"><a href="https://phizer.xyz/bms-starter-pack/">BMS Starter Pack ver_1.0</a></h2>
-
-			
-			
-		</div><!-- .entry-header-column -->
-
-	</div><!-- .entry-header-row -->
-
-</header><!-- .entry-header -->
-
-	
-<div class="entry-meta">
-
-	
-		<span class="posted-date">2019年5月13日</span>
-
-	
-	<span class="posted-author"><a href="https://phizer.xyz/author/admin/" title="由Phizer发布" rel="author">Phizer</a></span>
-
-	
-		<span class="comments-number">
-
-			<a href="https://phizer.xyz/bms-starter-pack/#respond" class="comments-link" >写评论</a>
-		</span>
-
-	
-</div><!-- .entry-meta -->
-
-	
-		
-<div class="entry-summary">
-
-	<p>这个歌包整理了绝大多数的BMS移植各音乐&hellip;</p>
-
-	<p><a class="button" href="https://phizer.xyz/bms-starter-pack/" aria-label="继续阅读 BMS Starter Pack ver_1.0">继续阅读 &rarr;</a></p>
-
-</div><!-- .entry-summary -->
-
-	
-	
-<footer class="entry-footer">
-
-	<div class="entry-footer-right">
-
-		
-	</div>
-
-	
-		
-		
-			<span class="cat-links">
-
-				发帖时间： <a href="https://phizer.xyz/bms/" rel="category tag">BMS资料库</a>
-			</span>
-
-		
-		
-		
-	
-</footer><!-- .entry-footer -->
-
-	
-</article><!-- #post-## -->
-
-		
-			
-<article id="post-179" class="post-179 post type-post status-publish format-standard hentry category-research category-hardware">
-
-	
-	
-		
-	
-	
-<header class="entry-header">
-
-	<div class="entry-header-row">
-
-		<div class="entry-header-column">
-
-			
-			
-				<h2 class="entry-title"><a href="https://phizer.xyz/latency/">音乐游戏延迟构成试分析</a></h2>
-
-			
-			
-		</div><!-- .entry-header-column -->
-
-	</div><!-- .entry-header-row -->
-
-</header><!-- .entry-header -->
-
-	
-<div class="entry-meta">
-
-	
-		<span class="posted-date">2019年5月10日</span>
-
-	
-	<span class="posted-author"><a href="https://phizer.xyz/author/admin/" title="由Phizer发布" rel="author">Phizer</a></span>
-
-	
-		<span class="comments-number">
-
-			<a href="https://phizer.xyz/latency/#comments" class="comments-link" >1 条评论</a>
-		</span>
-
-	
-</div><!-- .entry-meta -->
-
-	
-		
-<div class="entry-summary">
-
-	<p>⚠这是一篇研究笔记/阶段性总结性质的文章&hellip;</p>
-
-	<p><a class="button" href="https://phizer.xyz/latency/" aria-label="继续阅读 音乐游戏延迟构成试分析">继续阅读 &rarr;</a></p>
-
-</div><!-- .entry-summary -->
-
-	
-	
-<footer class="entry-footer">
-
-	<div class="entry-footer-right">
-
-		
-	</div>
-
-	
-		
-		
-			<span class="cat-links">
-
-				发帖时间： <a href="https://phizer.xyz/research/" rel="category tag">研究笔记</a>， <a href="https://phizer.xyz/research/hardware/" rel="category tag">硬件研究</a>
-			</span>
-
-		
-		
-		
-	
-</footer><!-- .entry-footer -->
-
-	
-</article><!-- #post-## -->
-
-		
-			
-<article id="post-169" class="post-169 post type-post status-publish format-standard hentry category-game category-research">
-
-	
-	
-		
-	
-	
-<header class="entry-header">
-
-	<div class="entry-header-row">
-
-		<div class="entry-header-column">
-
-			
-			
-				<h2 class="entry-title"><a href="https://phizer.xyz/judge/">音乐游戏各级判定区间表</a></h2>
-
-			
-			
-		</div><!-- .entry-header-column -->
-
-	</div><!-- .entry-header-row -->
-
-</header><!-- .entry-header -->
-
-	
-<div class="entry-meta">
-
-	
-		<span class="posted-date">2019年5月8日</span>
-
-	
-	<span class="posted-author"><a href="https://phizer.xyz/author/admin/" title="由Phizer发布" rel="author">Phizer</a></span>
-
-	
-		<span class="comments-number">
-
-			<a href="https://phizer.xyz/judge/#comments" class="comments-link" >10 Comments</a>
-		</span>
-
-	
-</div><!-- .entry-meta -->
-
-	
-		
-<div class="entry-summary">
-
-	<p>名词解释： 惩罚判定：打出该判定之后玩家&hellip;</p>
-
-	<p><a class="button" href="https://phizer.xyz/judge/" aria-label="继续阅读 音乐游戏各级判定区间表">继续阅读 &rarr;</a></p>
-
-</div><!-- .entry-summary -->
-
-	
-	
-<footer class="entry-footer">
-
-	<div class="entry-footer-right">
-
-		
-	</div>
-
-	
-		
-		
-			<span class="cat-links">
-
-				发帖时间： <a href="https://phizer.xyz/research/game/" rel="category tag">游戏机制</a>， <a href="https://phizer.xyz/research/" rel="category tag">研究笔记</a>
-			</span>
-
-		
-		
-		
-	
-</footer><!-- .entry-footer -->
-
-	
-</article><!-- #post-## -->
-
-		
-			
-<article id="post-158" class="post-158 post type-post status-publish format-standard hentry category-game category-research">
-
-	
-	
-		
-	
-	
-<header class="entry-header">
-
-	<div class="entry-header-row">
-
-		<div class="entry-header-column">
-
-			
-			
-				<h2 class="entry-title"><a href="https://phizer.xyz/note%e4%b8%8b%e8%90%bd%e9%80%9f%e5%ba%a6%e7%9b%b8%e5%85%b3/">Note下落速度相关</a></h2>
-
-			
-			
-		</div><!-- .entry-header-column -->
-
-	</div><!-- .entry-header-row -->
-
-</header><!-- .entry-header -->
-
-	
-<div class="entry-meta">
-
-	
-	<span class="posted-author"><a href="https://phizer.xyz/author/admin/" title="由Phizer发布" rel="author">Phizer</a></span>
-
-	
-		<span class="comments-number">
-
-			<a href="https://phizer.xyz/note%e4%b8%8b%e8%90%bd%e9%80%9f%e5%ba%a6%e7%9b%b8%e5%85%b3/#respond" class="comments-link" >写评论</a>
-		</span>
-
-	
-</div><!-- .entry-meta -->
-
-	
-		
-<div class="entry-summary">
-
-	<p>•下落速度下落式音乐游戏中Note的下落&hellip;</p>
-
-	<p><a class="button" href="https://phizer.xyz/note%e4%b8%8b%e8%90%bd%e9%80%9f%e5%ba%a6%e7%9b%b8%e5%85%b3/" aria-label="继续阅读 Note下落速度相关">继续阅读 &rarr;</a></p>
-
-</div><!-- .entry-summary -->
-
-	
-	
-<footer class="entry-footer">
-
-	<div class="entry-footer-right">
-
-		
-	</div>
-
-	
-		
-		
-			<span class="cat-links">
-
-				发帖时间： <a href="https://phizer.xyz/research/game/" rel="category tag">游戏机制</a>， <a href="https://phizer.xyz/research/" rel="category tag">研究笔记</a>
-			</span>
-
-		
-		
-		
-	
-</footer><!-- .entry-footer -->
-
-	
-</article><!-- #post-## -->
-
-		
-			
-<article id="post-21" class="post-21 post type-post status-publish format-standard hentry category-research category-hardware">
-
-	
-	
-		
-	
-	
-<header class="entry-header">
-
-	<div class="entry-header-row">
-
-		<div class="entry-header-column">
-
-			
-			
-				<h2 class="entry-title"><a href="https://phizer.xyz/touchdelay/">触屏设备性能参数表</a></h2>
-
-			
-			
-		</div><!-- .entry-header-column -->
-
-	</div><!-- .entry-header-row -->
-
-</header><!-- .entry-header -->
-
-	
-<div class="entry-meta">
-
-	
-		<span class="posted-date">2019年5月6日</span>
-
-	
-	<span class="posted-author"><a href="https://phizer.xyz/author/admin/" title="由Phizer发布" rel="author">Phizer</a></span>
-
-	
-		<span class="comments-number">
-
-			<a href="https://phizer.xyz/touchdelay/#comments" class="comments-link" >2 Comments</a>
-		</span>
-
-	
-</div><!-- .entry-meta -->
-
-	
-		
-<div class="entry-summary">
-
-	<p>这份列表是针对音乐游戏玩家而制作的，将目&hellip;</p>
-
-	<p><a class="button" href="https://phizer.xyz/touchdelay/" aria-label="继续阅读 触屏设备性能参数表">继续阅读 &rarr;</a></p>
-
-</div><!-- .entry-summary -->
-
-	
-	
-<footer class="entry-footer">
-
-	<div class="entry-footer-right">
-
-		
-	</div>
-
-	
-		
-		
-			<span class="cat-links">
-
-				发帖时间： <a href="https://phizer.xyz/research/" rel="category tag">研究笔记</a>， <a href="https://phizer.xyz/research/hardware/" rel="category tag">硬件研究</a>
-			</span>
-
-		
-		
-		
-	
-</footer><!-- .entry-footer -->
-
-	
-</article><!-- #post-## -->
-
-		
-		
-	
-	</main><!-- #main -->
-
-</div><!-- #primary -->
-
-
-<div id="secondary" class="widget-area" role="complementary">
-
-			<aside id="recent-posts-15" class="widget widget_recent_entries">		<h4 class="widget-title">近期文章</h4>		<ul>
-											<li>
-					<a href="https://phizer.xyz/reduce-latency-respectv/">DJMAX RESPECT V延迟降低方案（Ver 0.2）</a>
-									</li>
-											<li>
-					<a href="https://phizer.xyz/guide%ef%bc%9a%e5%a6%82%e4%bd%95%e5%9c%a8pc%e4%b8%8a%e8%8e%b7%e5%be%97%e6%9b%b4%e4%bd%8e%e7%9a%84%e5%bb%b6%e8%bf%9f%e4%bd%93%e9%aa%8c/">Guide：如何在PC上获得更低的延迟体验</a>
-									</li>
-											<li>
-					<a href="https://phizer.xyz/how-to-measure-latency/">如何测定街机的延迟？</a>
-									</li>
-											<li>
-					<a href="https://phizer.xyz/whoboughtbms/">商业游戏中收录的BMS曲目</a>
-									</li>
-											<li>
-					<a href="https://phizer.xyz/bms-starter-pack/">BMS Starter Pack ver_1.0</a>
-									</li>
-					</ul>
-		</aside>
-</div><!-- #secondary -->
-
-
-
-		</div><!-- #content -->
-
-		
-		<footer id="colophon" class="site-footer">
-
-			<div class="site-footer-inner">
-
-				
-			</div><!-- .site-footer-inner -->
-
-		</footer><!-- #colophon -->
-
-		
-<div class="site-info-wrapper">
-
-	<div class="site-info">
-
-		<div class="site-info-inner">
-
-			
-<div class="site-info-text">
-
-	you are now entering completly darkness.
-</div>
-
-		</div><!-- .site-info-inner -->
-
-	</div><!-- .site-info -->
-
-</div><!-- .site-info-wrapper -->
-
-	</div><!-- #page -->
-
-	<script type='text/javascript' src='https://phizer.xyz/wp-content/themes/primer/assets/js/navigation.min.js?ver=1.8.7'></script>
-<script type='text/javascript' src='https://phizer.xyz/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
-	<script>
-	/* IE11 skip link focus fix */
-	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
-	</script>
-	
 </body>
-
-</html>
