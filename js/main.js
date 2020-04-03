@@ -122,7 +122,7 @@
             menuToggle.toggleClass('is-clicked');
             siteBody.toggleClass('nav-wrap-is-visible');
         });
-
+document.body.addEventListener('touchstart',function(){});
         $('.header__nav .has-children').children('a').on('click', function (e) {
             
             e.preventDefault();
