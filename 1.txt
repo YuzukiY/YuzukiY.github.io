@@ -1,0 +1,29 @@
+function Reflash(){
+
+document.getElementsByClassName('reload J_reload')[1].click();
+
+}
+
+function GetPrimogems(){
+
+document.elementFromPoint(862-window.pageXOffset,2313-window.pageYOffset).click();
+
+}
+
+function queren(){
+
+document.elementFromPoint(770-window.pageXOffset,2343-window.pageYOffset).click();
+
+}
+
+function A(){
+
+setInterval(Reflash,100);
+
+setInterval(GetPrimogems,50);
+
+setInterval(queren,25);
+
+}
+
+setTimeout(A,1)
